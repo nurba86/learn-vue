@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <style>
+      .large {
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <h1>{{ title }}</h1>
+        <button
+          v-bind:class="[sizeToggle ? 'large': '', {'rounded': isRounded}]"
+          v-bind:style="styles"
+          v-bind:disabled="disabled"
+        >
+          START
+        </button>
+
+        <ul>
+          <li>
+            <input type="checkbox" v-model="sizeToggle" /><label for=""
+              >Uvelichit wrift</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" v-model="isRounded" /><label for=""
+              >okruglit</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" v-model="disabled" /><label for=""
+              >disable</label
+            >
+          </li>
+
+          <li><input type="text" v-model="fontColor" /></li>
+          <li><input type="text" v-model="backgroundColor" /></li>
+        </ul>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="script.js"></script>
+    <script></script>
+  </body>
+</html>
