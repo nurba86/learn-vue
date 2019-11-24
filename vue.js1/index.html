@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/vue.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="sample">
+      <input type="text" v-bind:value="name" v-on:input="name = $event.target.value">
+      <hr>
+      <h2>Hello, {{ name }}</h2>
+    </div>
+  </div>
+  <script>
+    let sample = new Vue({
+      el: '.sample',
+      data: {
+        name: '123'
+      }
+    });
+  </script>
+</body>
+</html>
